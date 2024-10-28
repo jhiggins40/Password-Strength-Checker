@@ -111,18 +111,3 @@ int main() {
             std::cout << "- " << tip << "\n";
         }
     }
-
-    // Option to save feedback to file
-    std::ofstream output("password_feedback.txt");
-    if (output.is_open()) {
-        output << "Password Strength Feedback\n";
-        output << "Strength: " << strengthToString(strength) << "\n";
-        for (const auto& tip : feedback) {
-            output << "- " << tip << "\n";
-        }
-        output.close();
-        std::cout << "Feedback saved to password_feedback.txt\n";
-    }
-
-    return 0;
-}
